@@ -4,5 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         <!--商品信息表-->
 <mapper namespace="com.ssm.mapper.ProductMapper">
-
+    <select id="getProductAll" resultType="com.ssm.pojo.Product">
+        SELECT * FROM product
+        WHERE productIsEnabled=2 LIMIT 6
+    </select>
+    <select id="getSearchAll" resultType="com.ssm.pojo.Product">
+        SELECT *
+        FROM  product AS p
+        INNER JOIN category AS c
+        ON  p.productCategoryId=c.categoryId
+        WHERE p.productName LIKE concat('%',#{productName},'%') AND p.productCategoryId=#{productCategoryId}
+        AND productIsEnabled IN(0,2)
+        LIMIT 0,20
+    </select>
 </mapper>

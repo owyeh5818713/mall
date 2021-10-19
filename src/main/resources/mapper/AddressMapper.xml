@@ -4,5 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--地区表接口-->
 <mapper namespace="com.ssm.mapper.AddressMapper">
-
+    <select id="getProvinceAddress" resultType="com.ssm.pojo.Address">
+        SELECT * FROM address   WHERE addressAreaId=addressRegionId
+    </select>
+    <select id="getCityAddress" resultType="com.ssm.pojo.Address">
+        SELECT * FROM address
+        WHERE addressRegionId=#{addressRegionId} AND addressAreaId!=addressRegionId
+    </select>
+    <select id="getAreaAddress" resultType="com.ssm.pojo.Address">
+        SELECT * FROM address
+        WHERE addressRegionId=#{addressRegionId} AND addressAreaId!=addressRegionId
+    </select>
 </mapper>
