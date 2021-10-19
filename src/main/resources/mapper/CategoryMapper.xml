@@ -4,5 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         <!--商品类别表接口-->
 <mapper namespace="com.ssm.mapper.CategoryMapper">
+    <resultMap id="getALL2" type="com.ssm.pojo.Category">
+        <id property="categoryId" column="categoryId"></id>
+        <collection property="productList" ofType="com.ssm.pojo.Product">
+            <id column="productId" property="productId"></id>
+        </collection>
+    </resultMap>
+    <select id="getAll" resultMap="getALL2">
+    SELECT * FROM category c
+ LEFT JOIN product p ON c.categoryId=p.productCategoryId
+    </select>
 
 </mapper>

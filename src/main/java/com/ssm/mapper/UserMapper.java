@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 //用户表接口
 public interface UserMapper {
-    public User getLogin(@Param("adminName")String adminName,@Param("adminPassword")String adminPassword);
+    public User getLogin(@Param("userName")String userName,@Param("userPassword")String userPassword);
 
 }

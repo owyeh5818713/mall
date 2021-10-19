@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+ <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="include/header.jsp" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 <script type="text/javascript">

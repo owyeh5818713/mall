@@ -51,7 +51,7 @@
         </div>
         <div class="pwdLogin">
             <span class="loginTitle">密码登录</span>
-            <form method="post" class="loginForm">
+            <form method="post" class="loginForm" action="/login">
                 <div class="loginInputDiv">
                     <label for="name" class="loginLabel"><img
                             src="${ctx}/res/images/fore/WebsiteImage/2018-04-27_235518.png"

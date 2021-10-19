@@ -2,6 +2,8 @@ package com.ssm.pojo;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 //商品信息表
 public class Product {
@@ -13,4 +15,5 @@ public class Product {
     private String productCreateDate; //促销价
     private int productCategoryId; //类别编号
     private Integer productIsEnabled; //商品状态 0:销售中 1:停售中 2:促销中
+    private List<Productimage> singleProductImageList;
 }
