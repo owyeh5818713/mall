@@ -20,7 +20,7 @@
                 <c:when test="${sessionScope.user.userName==null}">
                     <em>嗨！欢迎来到Mall商城</em>
                     <a href="${ctx}/tologin">登录</a>
-                    <a href="${ctx}/register">注册</a>
+                    <a href="${ctx}/tores">注册</a>
                 </c:when>
                 <c:otherwise>
                     <em>Hi，</em>
@@ -33,7 +33,7 @@
         <ul class="quick_li">
             <li class="quick_li_MyTaobao">
                 <div class="sn_menu">
-                    <a href="${ctx}/userDetails">我的Mall<b></b></a>
+                    <a href="${ctx}/userDetail">我的Mall<b></b></a>
                     <div class="quick_menu">
                         <a href="${ctx}/order/0/10">已买到的宝贝</a>
                         <a href="#">已卖出的宝贝</a>

@@ -7,4 +7,12 @@
     <select id="getLogin" resultType="com.ssm.pojo.User">
     select * from user where userName=#{userName} and userPassword=#{userPassword}
     </select>
+
+    <insert id="addUser" parameterType="com.ssm.pojo.User">
+        INSERT INTO `user`(userName,userPassword,userNickName,userBirthday,userGender,userAddress,userHomePlace)
+        VALUES(#{userName},#{userPassword},#{userNickName},#{userBirthday},#{userGender},#{userAddress},#{userAddress})
+    </insert>
+    <select id="getInformation" resultType="com.ssm.pojo.User">
+        SELECT  * FROM `user` WHERE userId=#{userId}
+    </select>
 </mapper>

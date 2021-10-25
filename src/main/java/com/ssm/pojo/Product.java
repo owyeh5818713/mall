@@ -16,4 +16,7 @@ public class Product {
     private int productCategoryId; //类别编号
     private Integer productIsEnabled; //商品状态 0:销售中 1:停售中 2:促销中
     private List<Productimage> singleProductImageList;
+    private List<Category> productCategory;//商品类型
+    private Integer productSaleCount;//总成交数量
+    private Integer productReviewCount;//评论次数
 }

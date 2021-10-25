@@ -4,5 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         <!--商品图片表-->
 <mapper namespace="com.ssm.mapper.ProductimageMapper">
-
+    <select id="getCommodity" resultType="com.ssm.pojo.Productimage">
+        SELECT * FROM productimage  WHERE productimageProductId=#{productimageProductId}
+        AND productimageType=0 LIMIT 1
+    </select>
 </mapper>

@@ -3,6 +3,8 @@ package com.ssm.controller;
 import com.ssm.pojo.User;
 import com.ssm.service.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -35,5 +37,30 @@ public class UserController {
             return "/fore/loginPage";
         }
     }
+
+
+
+    @RequestMapping(value = "/register",produces = {"application/json;charset=utf-8"})
+    @ResponseBody
+    public String getRegister(User user){
+        int i = userService.addUser(user);
+        if(i>0){
+            return "ok";
+        }else{
+            return "no";
+        }
+    }
+
+
+    @RequestMapping("/userDetail")
+    public String userDetails(HttpSession session, Model model){
+        if(session==null){
+            return "/fore/loginPage";
+        }else{
+            return "/fore/userDetails";
+        }
+    }
+
+
 
 }

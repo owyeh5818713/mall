@@ -11,4 +11,5 @@ private int categoryId; //主键
 private String categoryName; //名称
 private String categoryImageSrc; //图片
 private List<Product> productList;
+private List<Product> complexProductList;
 }

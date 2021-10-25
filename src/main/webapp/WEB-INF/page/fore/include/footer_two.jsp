@@ -10,7 +10,7 @@
     <div class="mall-desc">
         <dl>
             <dt><span>购物指南</span></dt>
-            <dd><a href="${ctx}/register" target="_blank">免费注册</a> <a
+            <dd><a href="${pageContext.request.contextPath}/${ctx}/tores" target="_blank">免费注册</a> <a
                     href="https://www.alipay.com/" target="_blank">开通支付宝</a> <a
                     href="#"
                     target="_blank">支付宝充值</a></dd>

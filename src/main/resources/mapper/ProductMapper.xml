@@ -17,4 +17,11 @@
         AND productIsEnabled IN(0,2)
         LIMIT 0,20
     </select>
+    <select id="prodyctsClothing" resultType="com.ssm.pojo.Product">
+        SELECT * FROM product WHERE productCategoryId=#{productCategoryId} AND productIsEnabled IN(0,2)
+        ORDER BY productId DESC LIMIT 8
+    </select>
+    <select id="getProductList" resultType="com.ssm.pojo.Product">
+         SELECT * FROM product WHERE productCategoryId=#{productCategoryId} AND productIsEnabled IN(0,2) ORDER BY productId
+    </select>
 </mapper>
