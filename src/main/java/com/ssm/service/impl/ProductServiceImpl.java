@@ -26,4 +26,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getProductList(Integer productCategoryId) {
         return mapper.getProductList(productCategoryId);
     }
+
+    @Override
+    public List<Product> getSearchAll(String productName) {
+        return mapper.getSearchAll(productName);
+    }
 }

@@ -19,8 +19,10 @@ public interface ProductMapper {
     public  List<Product> getProductList(Integer productCategoryId);
 
     //搜索栏查询
-    public List getSearchAll(@Param("productName")String productName,
-                             @Param("productCategoryId")int productCategoryId);
+    public List<Product> getSearchAll(@Param("productName")String productName);
+
+
+
 
 
 
