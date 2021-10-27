@@ -15,4 +15,7 @@
     <select id="getInformation" resultType="com.ssm.pojo.User">
         SELECT  * FROM `user` WHERE userId=#{userId}
     </select>
+    <select id="getUser" resultType="com.ssm.pojo.User">
+        SELECT * FROM `user` WHERE userId=#{userId}
+    </select>
 </mapper>

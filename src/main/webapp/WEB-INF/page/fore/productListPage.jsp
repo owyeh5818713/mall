@@ -18,7 +18,7 @@
                     src="${ctx}/res/images/fore/WebsiteImage/tmallLogoD.png"></a>
         </div>
         <div class="shopSearchHeader">
-            <form action="${ctx}/product" method="get">
+            <form action="${ctx}/product/search" method="get">
                 <div class="shopSearchInput">
                     <input type="text" class="searchInput" name="productName" placeholder="搜索 商品/品牌/店铺"
                            value="${requestScope.searchValue}" maxlength="50">
@@ -28,7 +28,7 @@
             <ul>
                 <c:forEach items="${requestScope.categoryList}" var="category" varStatus="i">
                     <li>
-                        <a href="${ctx}/product?categoryId=${category.categoryId}">${category.categoryName}</a>
+                        <a href="${ctx}/product/search?categoryId=${category.categoryId}">${category.categoryName}</a>
                     </li>
                 </c:forEach>
             </ul>
@@ -71,7 +71,8 @@
                 <c:forEach items="${requestScope.productList}" var="product">
                     <div class="context_productStyle">
                         <div class="context_product">
-                            <a href="${ctx}/product/${product.productId}"
+                            <%--跳转到商品详情--%>
+                            <a href="${ctx}/product/productdetails?productId=${product.productId}"
                                target="_blank"><img class="context_product_imgMain"
                                                     src="${ctx}/res/images/item/productSinglePicture/${product.singleProductImageList[0].productImageSrc}"/></a>
                             <ul class="context_product_imgList">

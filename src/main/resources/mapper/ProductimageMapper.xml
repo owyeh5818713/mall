@@ -8,4 +8,16 @@
         SELECT * FROM productimage  WHERE productimageProductId=#{productimageProductId}
         AND productimageType=0 LIMIT 1
     </select>
+    <select id="getProductImagePreview" resultType="com.ssm.pojo.Productimage">
+        SELECT * FROM productimage
+        WHERE productimageProductId=#{productimageProductId} AND productimageType=0
+    </select>
+    <select id="getProductImageDetail" resultType="com.ssm.pojo.Productimage">
+         SELECT * FROM productimage
+         WHERE  productimageProductId=#{productimageProductId}
+    </select>
+    <select id="getProductImageDetail2" resultType="com.ssm.pojo.Productimage">
+        SELECT * FROM productimage
+        WHERE productimageProductId=#{productimageProductId} AND productimageType=1
+    </select>
 </mapper>

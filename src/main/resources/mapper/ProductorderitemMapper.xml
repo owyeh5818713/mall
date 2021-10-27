@@ -4,5 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         <!--订单明细表接口-->
 <mapper namespace="com.ssm.mapper.ProductorderitemMapper">
-
+    <select id="getProductorderItemCount" resultType="int">
+         SELECT COUNT(productorderitemNumber) FROM productorderitem
+         WHERE productorderitemProductId=#{productorId}
+    </select>
 </mapper>

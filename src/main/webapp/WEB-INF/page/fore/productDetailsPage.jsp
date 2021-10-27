@@ -168,7 +168,7 @@
                 $(function () {
                     //点击购买按钮时
                     $(".context_buy_form").submit(function () {
-                        if ('${sessionScope.userId}' === "") {
+                        if ('${sessionScope.user.userId}' === "") {
                             $(".loginModel").show();
                             $(".loginDiv").show();
                             return false;
@@ -183,7 +183,7 @@
                     });
                     //点击加入购物车按钮时
                     $(".context_buyCar_form").submit(function () {
-                        if ('${sessionScope.userId}' === "") {
+                        if ('${sessionScope.user.userId}' === "") {
                             $(".loginModel").show();
                             $(".loginDiv").show();
                             return false;

@@ -19,4 +19,8 @@ public class Product {
     private List<Category> productCategory;//商品类型
     private Integer productSaleCount;//总成交数量
     private Integer productReviewCount;//评论次数
+    private List<Review> reviewList; //评论内容
+    private List<Productimage> detailProductImageList; //详细图片集合
+
+
 }

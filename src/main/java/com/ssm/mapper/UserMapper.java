@@ -18,4 +18,7 @@ public interface UserMapper {
     //用户个人信息展示
     public User getInformation(@Param("userId")int userId);
 
+    //用户查询
+    public User getUser(@Param("userId")int userId);
+
 }

@@ -26,4 +26,9 @@ public class UserServiceImpl implements UserService {
     public User getInformation(int userId) {
         return mapper.getInformation(userId);
     }
+
+    @Override
+    public User getUser(int userId) {
+        return mapper.getUser(userId);
+    }
 }
